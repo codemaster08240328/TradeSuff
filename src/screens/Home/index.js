@@ -33,8 +33,9 @@ export default class Home extends Component {
                 { uri: require('../../../assets/images/temp/1.png') },
               ],
             listType:0 // 0:Available, 1:Traded
-        });
 
+        });
+        this.onPressAddStuff = this.onPressAddStuff.bind(this)
     }
 
     onPressScrollItem(index) {
@@ -178,7 +179,7 @@ export default class Home extends Component {
 
                     <View style={Styles.bottomView}>
                         <View style={Styles.addStuffBtn}>
-                            <TouchableOpacity style={Styles.radius10Btn}>
+                            <TouchableOpacity style={Styles.radius10Btn} onPress={this.onPressAddStuff}>
                                 <Icon
                                     type='feather'
                                     color='white'
